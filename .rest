@@ -1,0 +1,32 @@
+###
+post http://localhost:8082/api/places
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name":"Parque do Japão",
+    "state":"PR",
+    "slug":"PQJ",
+    "city":"Maringá"
+}
+
+###
+PATCH  http://localhost:8082/api/places/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "slug":"PQI",
+    "name":"Parque do Ingá",
+    "state":"PR", 
+    "city":"Maringá"    
+}
+
+###
+get http://localhost:8082/api/places
+
+###
+get http://localhost:8082/api/places/search?q=PQI
+
+###
+get http://localhost:8082/api/places/2
